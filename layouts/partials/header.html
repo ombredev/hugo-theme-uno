@@ -1,8 +1,8 @@
-<nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
+<nav id="header" class="bg-white fixed w-full z-10 top-0 h-20 shadow-sm">
 
   <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
 
-  <div class="w-full container mx-auto flex flex-wrap items-center justify-between my-1">
+  <div class="w-full container mx-auto flex flex-wrap items-center justify-between my-4 max-w-screen-xl">
       <div class="pl-4">
           <a class="text-gray-900 text-base no-underline hover:no-underline font-bold text-xl"  href="/">
               {{ $.Site.Title }}
@@ -19,7 +19,7 @@
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
               {{- range $item := $.Site.Params.NavItems }}
               <li class="mr-3">
-                  <a href="{{ index $item 1 }}" class="inline-block py-2 px-2 text-gray-700 font-bold no-underline">{{ index $item 0 }}</a>
+                  <a href="{{ index $item 1 }}" class="inline-block py-2 px-2 text-gray-700 no-underline">{{ index $item 0 }}</a>
               </li>
               {{- end }}
           </ul>
